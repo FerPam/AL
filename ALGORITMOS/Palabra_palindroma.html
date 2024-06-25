@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<title>Palabra Palíndroma</title>
+</head>
+<body>
+	<h1>Palabra Palíndroma</h1>
+	<input type="text" id="palabra" placeholder="Escribe una palabra">
+	<button onclick="verificarPalindromo()">Verificar palíndromo</button>
+	<p id="resultado"></p>
+
+	<script>
+		function verificarPalindromo() {
+			let palabra = document.getElementById("palabra").value;
+			let a = 1;
+			let b = palabra.length;
+			let c = 0;
+
+			while (a < b) {
+				if (palabra.substring(a-1, a) !== palabra.substring(b-1, b)) {
+					c++;
+				}
+				a++;
+				b--;
+			}
+
+			if (c === 0) {
+				document.getElementById("resultado").innerHTML = "La palabra " + palabra + " es palíndroma";
+			} else {
+				document.getElementById("resultado").innerHTML = "La palabra " + palabra + " no es palíndroma";
+			}
+		}
+	</script>
+</body>
+</html>

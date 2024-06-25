@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<title>Determina</title>
+</head>
+<body>
+	<h1>Determina si es  +, - o 0</h1>
+	<input type="number" id="num" placeholder="Ingresa un número entero">
+	<button onclick="determinarTipo()">Determinar </button>
+	<p id="resultado"></p>
+
+	<script>
+		function determinarTipo() {
+			let num = document.getElementById("num").value;
+			if (num > 0) {
+				document.getElementById("resultado").innerHTML = "Número: " + num + " es Positivo";
+			} else {
+				if (num < 0) {
+					document.getElementById("resultado").innerHTML = "Número: " + num + " es Negativo";
+				} else {
+					document.getElementById("resultado").innerHTML = "El número es 0";
+				}
+			}
+		}
+	</script>
+</body>
+</html>

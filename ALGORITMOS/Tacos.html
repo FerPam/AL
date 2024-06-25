@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<title>Tacos en la CDMX</title>
+</head>
+
+<body>
+	<h1>Tacos</h1>
+
+	<input type="number" id="personas" >
+	<button onclick="CalnumdeTacos()">Calcular</button> 
+	<p id= "resultado"></p>
+
+	<script>
+	function CalnumdeTacos() {
+		let personas = document.getElementById("personas").value;
+		let tacos = 5 * personas;
+        if (personas === "" || tacos === "") {
+			document.getElementById("resultado").innerHTML = "Ingresa la cantidad de personas";
+		} else {
+			document.getElementById("resultado").innerHTML = "Numero de tacos consumidos: " + tacos;
+		}
+	} 
+</script>
+
+</body>
+</html>

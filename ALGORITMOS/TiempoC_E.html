@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TiempoCE</title>
+</head>
+<body>
+	<h1>Tiempo casa-Escuela</h1>
+	<input type="number" id="velocidad" placeholder="Velocidad (km/h)">
+	<input type="number" id="distancia" placeholder="Distancia (km)">
+	<button onclick="calcular()">Calcular</button>
+	<p id="resultado"></p>
+
+	<script>
+		function calcular() {
+			let velocidad = document.getElementById("velocidad").value;
+			let distancia = document.getElementById("distancia").value;
+
+			if (velocidad <= 0 || distancia <= 0) {
+				document.getElementById("resultado").innerHTML = "Error: velocidad y distancia deben ser números positivos";
+				return;
+			}
+
+			let tiempo = distancia / velocidad;
+
+			document.getElementById("resultado").innerHTML = "Tiempo: " + tiempo.toFixed(2) + " horas";
+		}
+	</script>
+</body>
+</html>

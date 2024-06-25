@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Conversor de monedas</title>
+    
+</head>
+<body>
+    <h1>Conversor de monedas</h1>
+    <p>Ingrese un valor en pesos mexicanos:</p>
+    <input type="number" id="pesos-mexicanos" value="0">
+    <button onclick="convertirMoneda()">Convertir</button>
+    <div id="resultado"></div>
+
+    <script>
+        function convertirMoneda() {
+            const pesosMexicanos = document.getElementById("pesos-mexicanos").value;
+            const tArgentina = 48.62; 
+            const tChile = 49.72; 
+            const tColombia = 213.83; 
+            const tPeru = 0.20; 
+            const tUruguay = 2.09; 
+            const tGuatemala = 0.42;
+            const tVenezuela = 2.18;
+            const tBrasil = 0.29;
+            const tBelice = 0.11;
+            const tBarbados = 0.11;
+            const tBoliva = 0.37;
+            const tCostaRica = 28.58 ;
+            const tCuba = 1.30;
+            const tEcuador = 0.054;
+            const tSalvador = 0.47;
+            const tGuayana = 11.31;
+            const tHaití = 7.17;
+            const tHonduras =  1.34;
+            const tNicaragua = 1.99;
+            const tPanamá = 0.054  
+            const tParaguay = 406.82;
+            const tRepublicaDominicana = 3.24;
+
+
+            const pesosArgentina = pesosMexicanos * tArgentina;
+            const pesosChile = pesosMexicanos * tChile;
+            const pesosColombia = pesosMexicanos * tColombia;
+            const pesosPeru = pesosMexicanos * tPeru;
+            const pesosUruguay = pesosMexicanos * tUruguay;
+            const pesosGuatemala = pesosMexicanos * tGuatemala;
+            const pesosBrasil = pesosMexicanos * tBrasil;
+            const pesosBelice = pesosMexicanos * tBelice;
+            const pesosBarbados = pesosMexicanos * tBarbados;
+            const pesosBoliva = pesosMexicanos * tBoliva;
+            const pesosCostaRica = pesosMexicanos * tCostaRica;
+            const pesosCuba = pesosMexicanos * tCuba;
+            const pesosEcuador = pesosMexicanos * tEcuador;
+            const pesosSalvador = pesosMexicanos * tSalvador;
+            const pesosGuayana = pesosMexicanos * tGuayana;
+            const pesosHaiti = pesosMexicanos * tHaití;
+            const pesosHonduras= pesosMexicanos * tHonduras;
+            const pesosNicaragua = pesosMexicanos * tNicaragua;
+            const pesosPanamá= pesosMexicanos * tPanamá;
+            const pesosParaguay = pesosMexicanos * tParaguay;
+            const pesosRepublicaDominicana = pesosMexicanos * tRepublicaDominicana;
+
+            const resultado = `
+                <p>$${pesosMexicanos} MXN es igual a:</p>
+                <p>$${pesosArgentina.toFixed(2)} en Argentina</p>
+                <p>$${pesosChile.toFixed(2)} en Chile</p>
+                <p>$${pesosColombia.toFixed(2)}  en Colombia</p>
+                <p>$${pesosPeru.toFixed(2)} en Perú</p>
+                <p>$${pesosUruguay.toFixed(2)} en Uruguay</p>
+                <p>$${pesosGuatemala.toFixed(2)} en Guatemala</p>
+                <p>$${pesosBrasil.toFixed(2)} en Brasil</p>
+                <p>$${pesosBelice.toFixed(2)} en Belice</p>
+                <p>$${pesosBarbados.toFixed(2)} en Barbados</p>
+                <p>$${pesosBoliva.toFixed(2)} en Boliva</p>
+                <p>$${pesosCostaRica.toFixed(2)} en Costa Rica</p>
+                <p>$${pesosCuba.toFixed(2)} en Cuba</p>
+                <p>$${pesosEcuador.toFixed(2)} en Ecuador</p>
+                <p>$${pesosSalvador.toFixed(2)} en Salvador</p>
+                <p>$${pesosGuayana.toFixed(2)} en Guayana</p>
+                <p>$${pesosHaiti.toFixed(2)} en Haití</p>
+                <p>$${pesosHonduras.toFixed(2)} en Honduras</p>
+                <p>$${pesosNicaragua.toFixed(2)} en Nicargua</p>
+                <p>$${pesosPanamá.toFixed(2)} en Panamá</p>
+                <p>$${pesosParaguay.toFixed(2)} en Paraguay</p>
+                <p>$${pesosRepublicaDominicana.toFixed(2)} en Republica Dominicana</p>
+            `;
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

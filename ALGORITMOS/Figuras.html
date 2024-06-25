@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+
+  <title>Figuras geométricas</title>
+</head>
+<body>
+  <h1>Figuras geométricas</h1>
+  <select id="figura">
+    <option value="1">Cuadrado</option>
+    <option value="2">Rectángulo</option>
+    <option value="3">Círculo</option>
+    <option value="4">Pentágono</option>
+    <option value="5">Triángulo</option>
+    <option value="6">Hexágono</option>
+    <option value="7">Heptágono</option>
+    <option value="8">Octágono</option>
+    <option value="9">Nonágono</option>
+    <option value="10">Decágono</option>
+    <option value="11">Dodecágono</option>
+    <option value="12">Trapecio</option>
+    <option value="13">Paralelogramo</option>
+    <option value="14">Rombo</option>
+    <option value="15">Romboide</option>
+    <option value="16">Elipse</option>
+    <option value="17">Triángulo equilátero</option>
+    <option value="18">Triángulo isósceles</option>
+    <option value="19">Triángulo escaleno</option>
+    <option value="20">Cubo</option>
+    <option value="21">Cilindro</option>
+    <option value="22">Esfera</option>
+    <option value="23">Pirámide rectangular</option>
+    <option value="24">Cono</option>
+    <option value="25">Triángulo rectángulo</option>
+    <option value="26">Icosaedro</option>
+    <option value="27">Octaedro</option>
+    <option value="28">Tetraedro</option>
+    <option value="29">Dodecaedro</option>
+    <option value="30">Prisma triangular</option>
+    <option value="31">Prisma rectangular</option>
+    <option value="32">Prisma pentagonal</option>
+    <option value="33">Prisma hexagonal</option>
+  </select>
+  <button onclick="calcularFigura()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularFigura() {
+      let figura = document.getElementById("figura").value;
+      let resultado = "";
+    
+    
+      if (figura == 1) {
+        resultado = "Cuadrado";
+        let lado = prompt("Ingresar el lado del cuadrado:");
+        let perimetro = lado * 4;
+        let area = lado * lado;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+      } else if (figura == 2) {
+        resultado = "Rectángulo";
+        let base = prompt("Valor de la base:");
+        let altura = prompt("Valor de la altura:");
+        let perimetro = 2 * (base + altura);
+        let area = base * altura;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+      } else if (figura == 3) {
+        resultado = "Circulo";
+        let radio = prompt("Valor del radio:");
+        let perimetro = 2 * 3.1416 * radio;
+        let area = 3.1416 * radio * radio;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+      } else if (figura == 4){
+        resultado = "Pentágono";
+        let lado = prompt("Valor del lado:");
+        let apotema = prompt ("Valor del apotema:");
+        let perimetro = 5 *lado;
+        let area = (perímetro * apotema) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+      } else if (figura == 5){
+        resultado = "Triangulo";
+        let base = prompt("Base:");
+        let altura = prompt ("Altura:");
+        let lado = prompt ("Lado:");
+        let perimetro = lado * 3;
+        let area = (base * altura) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+      } else if (figura == 6){
+        resultado = "Hexágono";
+        let lado = prompt("Lado:");
+        let apotema = prompt ("Apotema:");
+        let perimetro = lado * 6;
+        let area = (perimetro * apotema) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+     } else if (figura == 7) {
+        resultado = "Heptágono";
+        let lado = prompt("Lado:");
+        let apotema = prompt ("Apotema:");
+        let perimetro = lado * 7;
+        let area = (perimetro * apotema) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+     } else if (figura == 8) {
+        resultado = "Octágono";
+        let lado = prompt("Lado:");
+        let apotema = prompt ("Apotema:");
+        let perimetro = lado * 8;
+        let area = (perimetro * apotema) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+    } else if (figura == 9) {
+        resultado = "Nonágono";
+        let lado = prompt("Lado:");
+        let perimetro = lado * 9;
+        let area = (9 * lado * lado) / (4 * Math.tan(Math.PI / 9));
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+    } else if (figura == 10) {
+        resultado = "Decágono";
+        let lado = prompt("Lado:");
+        let perimetro = lado * 10;
+        let area = (10 * lado * lado) / (4 * Math.tan(Math.PI / 10));
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+    } else if (figura == 11) {
+        resultado = "Dodecágono";
+        let lado = prompt("Lado:");
+        let perimetro = lado * 12;
+        let area = (12 * lado * lado) / (4 * Math.tan(Math.PI / 12));
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+    } else if (figura == 12) {
+        resultado = "Trapecio";
+        let base1 = prompt("Base 1:");
+        let base2 = prompt("Base 2:");
+        let h = prompt ("Altura:");
+        let a = prompt ("Lado a:");
+        let b = prompt ("Lado b:");
+        let c = prompt ("Lado c:");
+        let d = prompt ("Lado d:");
+        let perimetro = a + b + c + d;
+        let area = (base1 + base2) / 2 * h;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`; 
+
+    } else if (figura == 13) {
+        resultado = "Paralelogramo";
+        let base = prompt("Base:");
+        let altura = prompt ("Altura:");
+        let perimetro = 2 * (base + altura);
+        let area = base * altura;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+    } else if (figura == 14) {
+        resultado = "Rombo";
+        let lado = prompt("Lado:");
+        let d1 = prompt ("Diagonal Mayor:");
+        let d2 = prompt ("Diagonal Menor:");
+        let perimetro = 4 * lado;
+        let area = (d1 * d2) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+    } else if (figura == 15) {
+        resultado = "Romboide";
+        let base = prompt("Base:");
+        let altura = prompt ("Altura:");
+        let Lc = prompt ("Longitud corta:");
+        let Ll = prompt ("Longitud larga:");
+        let perimetro = 2 *(Lc+Ll);
+        let area = base * altura;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+    } else if (figura == 16) {
+        resultado = "Elipse";
+        let M = prompt("Longitud del eje Mayor:");
+        let m = prompt ("Longitud del eje Menor:");
+        let perimetro = 3.1416 * (3 * (M + m) - Math.sqrt((3 * M + m) * (M + 3 * m)));;
+        let area = 3.1416 * M * m;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+    } else if (figura == 17) {
+        resultado = "Triangulo Equilátero";
+        let lado = prompt("Lado:");
+        let perimetro = 3 * lado;
+        let area = (lado * lado) * (Math.sqrt(3) / 4);
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+    } else if (figura == 18) {
+        resultado = "Triangulo isósceles";
+        let B = prompt("Base:");
+        let altura= prompt ("Altura:");
+        let perimetro = (B / 4) * Math.sqrt(4 * altura * altura - B * B);
+        let area = (B * altura) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+    } else if (figura == 19) {
+        resultado = "Triangulo escaleno";
+        let a = prompt("Longitud a:");
+        let b = prompt("Longitud b:");
+        let c = prompt("Longitud c:");
+        let s = (a + b + c) / 2;
+        let perimetro = a + b + c;
+        let area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+        
+    } else if (figura == 20) {
+        resultado = "Cubo";
+        let lado = prompt("Lado:");
+        let volumen =  (lado * lado * lado);
+        let area =  6 * (lado * lado);
+        resultado += `<br>Volumen: ${volumen}<br>Área: ${area}`;
+        
+    } else if (figura == 21) {
+        resultado = "Cilindro";
+        let radio = prompt("Radio:");
+        let altura = prompt ("Altura:");
+        let volumen = 3.1416 * (radio * radio) * altura;
+        let area =  2 * 3.1416 * radio * (radio + altura);
+        resultado += `<br>Volumen: ${volumen}<br>Área: ${area}`;
+        
+    } else if (figura == 22) {
+        resultado = "Esfera";
+        let radio = prompt("Radio:");
+        let d1 = prompt ("Diagonal Mayor:");
+        let d2 = prompt ("Diagonal Menor:");
+        let volumen = (4/3) * 3.1416 * (radio * radio * radio);
+        let area =  4 * 3.1416 * (radio * radio);
+        resultado += `<br>Volumen ${volumen}<br>Área: ${area}`;
+        
+    } else if (figura == 23) {
+        resultado = "Pirámide Rectangular";
+        let base = prompt("Base:");
+        let a = prompt ("Ancho:");
+        let h = prompt ("Altura:");
+        let areaBase = a*b;
+		let areaLateral = 1/2*b*h;
+		let area = areaBase + areaLateral;
+		let perimetro = 2 * (a + b);
+		let volumen = (a * b * h) / 3;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}<br>Volumen: ${volumen}`;
+
+    } else if (figura == 24) {
+        resultado = "Cono";
+        let r = prompt("Radio:");
+        let g = prompt ("Generatriz:");
+        let h = prompt ("Altura:");
+        let area = (3.1416 *r *r)+(3.1416 *r *g);
+		let perimetro = Math.sqrt(r * r) + (g * g);
+		let volumen = (3.1416 * r * r *h) /3;
+        resultado += `<br>Volumen: ${volumen}<br>Área: ${area}<br>Perímetro: ${perimetro}`;
+
+    } else if (figura == 25) {
+        resultado = "Triangulo Rectangulo";
+        let LadoA = prompt("Lado a:");
+        let ladoB = prompt ("Lado b:");
+        let c = Math.sqrt(a^2+b^2);
+		let perimetro = a+b+c;
+		let area = (a * b) / 2;
+        resultado += `<br>Perímetro: ${perimetro}<br>Área: ${area}`;
+
+    } else if (figura == 26) {
+        resultado = "Icosaedro";
+        let arista = prompt("Arista:");
+        let volumen = (5* (3 + Math.sqrt(5)) /12)* arista * arista * arista;
+        let area = 8.66 *  (arista * arista);
+        resultado += `<br>Volumen: ${volumen}<br>Área: ${area}`;
+
+    } else if (figura == 27) {
+        resultado = "Octaedro";
+        let arista = prompt("Arista:");
+        let volumen = (1/3)*Math.sqrt(2)* arista * arista * arista;
+        let area = 3.464 *  (arista * arista);
+        resultado += `<br>Volumen: ${volumen}<br>Área: ${area}`;
+
+    } else if (figura == 28) {
+        resultado = "Tetraedro";
+        let arista = prompt("Arista:");
+        let volumen = (1.414/ 2) * (arista*arista*arista);
+        let area = 1.732 *  (arista * arista);
+        resultado += `<br>Volumen: ${volumen}<br>Área: ${area}`;
+
+    } else if (figura == 29) {
+        resultado = "Dodecaedro";
+        let arista = prompt("Arista:");
+        let volumen = (15 + 7 + 2.236)/ 4 * (arista*arista*arista);
+        let area = 3* (5 + 2.236) * (arista * arista);
+        resultado += `<br>Volumen: ${volumen}<br>Área: ${area}`;
+    
+
+    } else if (figura == 30) {
+        resultado = "Prisma triangular";
+        let l = prompt("Longitud:");
+        let A = prompt("Ancho:");
+        let h = prompt ("Altura:");
+        let area = l * A + l * h + A * h;
+		let perimetro = 3 * ( l+A+h);
+		let volumen = (l * A* h)/2;
+        resultado += `<br>Área: ${area}<br>Perímetro: ${perimetro}<br>Volumen: ${volumen}`;
+
+    } else if (figura == 31) {
+        resultado = "Prisma rectangular";
+        let l = prompt("Longitud:");
+        let A = prompt("Ancho:");
+        let h = prompt ("Altura:");
+        let area = 2 * (l * A + l * h + A * h);
+		let perimetro = 4 * ( l+A+h);
+		let volumen = l * A * h;
+        resultado += `<br>Área: ${area}<br>Perímetro: ${perimetro}<br>Volumen: ${volumen}`;
+
+
+    } else if (figura == 32) {
+        resultado = "Prisma pentagonal";
+        let a = prompt("Apotema:");
+        let b = prompt("Base:");
+        let h = prompt ("Altura:");
+        let areaP = (5 * a * a) / (4 * Math.tan(3.1416 / 5));
+		let perimetroP = 5 * a;
+		let areaPrisma = 5 * a * b + 5 * b * h + areaP;
+		let perimetroPrisma = 5 * (a + b + h);
+		let volumen = areaP * h;
+        resultado += `<br>Área del Prisma: ${areaPrisma}<br>Perímetro del Prisma: ${perimetroPrisma}<br>Volumen: ${volumen}`;
+
+
+    } else if (figura == 33) {
+        resultado = "Prisma hexagonal";
+        let a = prompt("Apotema:");
+        let b = prompt ("Base:");
+        let h = prompt ("Altura:");
+        let areaHex = (6 * a * a) / (4 * Math.tan(3.1416 / 6))
+		let perimetroHex = 6 * a
+		let areaPrisma = 6 * a * b + 6 * b * h + areaHex
+		let perimetroPrisma = 6 * (a + b + h)
+	    let volumen = areaHex * h
+        resultado += `<br>Área del Prisma: ${areaPrisma}<br>Perímetro del Prisma: ${perimetroPrisma}<br>Volumen: ${volumen}`;
+
+    } else if (figura == 34) {
+        resultado = "Prisma Heptagonal";
+        let a = prompt("Apotema:");
+        let b = prompt ("Base:");
+        let h = prompt ("Altura:");
+        let areaHep = (7 * a * a) / (7 * Math.tan(3.1416 / 7))
+		let perimetroHep = 7 * a
+		let areaPrisma = 7 * a * b + 7 * b * h + areaHep
+		let perimetroPrisma = 7 * (a + b + h)
+	    let volumen = areaHep * h
+        resultado += `<br>Área del Prisma: ${areaPrisma}<br>Perímetro del Prisma: ${perimetroPrisma}<br>Volumen: ${volumen}`;
+
+        
+
+        
+        
+        
+        
+        
+        
+     }
+
+        
+
+      
+
+      document.getElementById("resultado").innerHTML = resultado;
+    }
+
+</script>
+</body>
+</html>
+    
+   

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+
+  <body>
+    <h1>Convertir pulgadas a milímetros</h1>
+    <form>
+      <label for="inches">Pulgadas:</label>
+      <input type="number" id="inches" value="0">
+      <button type="button" onclick="convert()">Convertir</button>
+      <p id="result"></p>
+    </form>
+
+    <script>
+      function convert() {
+        let inches = document.getElementById("inches").value;
+        let mm = inches * 25.4;
+        document.getElementById("result").innerHTML = inches + " pulgadas son " + mm.toFixed(2) + " milímetros";
+      }
+    </script>
+  </body>
+</html>

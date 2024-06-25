@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html> <html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+
+	<title>Mn3</title>
+</head>
+    <body>
+        <h1> Par, menor que 30</h1>
+        <input type="number" id="numero" min="10" max="99" placeholder="Ingrese un número de 2 dígitos">
+        <button onclick="verificarNumero()">Verificar</button>
+        <p id="resultado"></p>
+    
+        <script>
+            function verificarNumero() {
+                let numero = document.getElementById("numero").value;
+                let Par = numero % 2 === 0;
+                let menor30 = numero < 30;
+                let mayor30 = numero > 30;
+            
+    
+                if (Par && menor30) {
+                    document.getElementById("resultado").innerHTML = "El número " + numero + " es par y menor que 30";
+                } else if (Par) {
+                    document.getElementById("resultado").innerHTML = "El número " + numero + " es par";
+                } else if (menor30) {
+                    document.getElementById("resultado").innerHTML = "El número " + numero + " es menor que 30";
+                } else if (mayor30){
+                        document.getElementById("resultado").innerHTML = "El número " + numero + " es mayor que 30";
+                } else  {
+                    document.getElementById("resultado").innerHTML = "El número " + numero + " no es par ni menor que 30";
+                }
+            }
+        </script>
+    </body>
+    </html>
